@@ -33,6 +33,7 @@ contract DeployRaffle is Script {
             config.subscriptionId,
             config.callbackGasLimit
         );
+        vm.deal(address(raffle), 10 ether);
         vm.stopBroadcast();
 
         AddConsumer addConsumer = new AddConsumer();

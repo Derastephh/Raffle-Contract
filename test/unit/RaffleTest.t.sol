@@ -47,6 +47,10 @@ contract RaffleTest is Test {
         _;
     }
 
+    function testBalaceRaffle() public {
+        console.log(address(raffle).balance);
+    }
+
     function testRaffleStateOpen() public view {
         assert(raffle.getRaffleState() == Raffle.RaffleState.OPEN);
     }
